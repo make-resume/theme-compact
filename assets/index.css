@@ -2,7 +2,7 @@ body {
 	font-family: "Inter", sans-serif;
 }
 .c-container {
-	width: 800px;
+	width: 80ch;
 	max-width: 90%;
 	margin: 0 auto;
 }
@@ -13,4 +13,14 @@ body {
 	.mb-sm-4 {
 		margin-bottom: 0 !important;
 	}
+}
+.section-title {
+	margin: 0;
+	padding: 8px 0 8px 0;
+	margin-bottom: 8px;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
 }
