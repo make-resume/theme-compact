@@ -7,6 +7,13 @@ body {
 	max-width: 90%;
 	margin: 0 auto;
 }
+
+@media print {
+	.c-container {
+		width: 100%;
+	}
+}
+
 .mb-sm-4 {
 	margin-bottom: 1rem !important;
 }
@@ -26,10 +33,10 @@ body {
 	font-weight: 600;
 }
 .item {
-	margin-bottom: 16px !important;
+	margin-bottom: 8px !important;
 }
 .item__head {
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 }
 .item__title {
 	font-size: 22px;
@@ -64,4 +71,8 @@ blockquote {
 	background: lightgray;
 	padding: 4px 8px;
 	font-style: italic;
+}
+
+.text-gray {
+	color: gray;
 }
