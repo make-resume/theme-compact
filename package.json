@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Inambe/make-resume-theme-compact.git"
+		"url": "git+https://github.com/make-resume/make-resume-theme-compact.git"
 	},
 	"keywords": [
 		"resume",
@@ -19,7 +19,7 @@
 	"author": "Inam Ul Huq",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/Inambe/make-resume-theme-compact/issues"
+		"url": "https://github.com/make-resume/make-resume-theme-compact/issues"
 	},
-	"homepage": "https://github.com/Inambe/make-resume-theme-compact#readme"
+	"homepage": "https://github.com/make-resume/make-resume-theme-compact#readme"
 }
