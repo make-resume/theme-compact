@@ -2,14 +2,16 @@
 {{#>section title="Interests"}}
 	<div class="columns is-multiline is-gapless m-0">
 		{{#each interests}}
-		<div class="column is-3 mb-4">
-			<h5 class="m-0">{{this.name}}</h5>
+		<div class="column is-3 item">
+			<h5 class="skill__title">{{this.name}}</h5>
 			{{#if this.keywords}}
-			<ul>
-				{{#each this.keywords}}
-				<li>{{this}}</li>
-				{{/each}}
-			</ul>
+			<div class="item__content">
+				<ul>
+					{{#each this.keywords}}
+					<li>{{this}}</li>
+					{{/each}}
+				</ul>
+			</div>
 			{{/if}}
 		</div>
 		{{/each}}
