@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{resume.basics.name}} - {{resume.basics.label}}</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+		<link rel="stylesheet" href="./assets/index.css" />
+	</head>
+	<body>
+		{{#with resume.basics}}
+		{{> header}}
+		{{/with}}
+
+		<div class="c-container content">
+			{{#with resume.basics}}
+			{{> summary}}
+			{{/with}}
+
+			{{#with resume}}
+			{{> work}}
+			{{> volunteer}}
+			{{> education}}
+			{{> awards}}
+			{{> publications}}
+			{{> skills}}
+			{{> languages}}
+			{{> interests}}
+			{{> references}}
+			{{/with}}
+		</div>
+	</body>
+</html>
