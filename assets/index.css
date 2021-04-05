@@ -59,3 +59,9 @@ body {
 	padding: 4px 8px;
 	background: lightgray;
 }
+
+blockquote {
+	background: lightgray;
+	padding: 4px 8px;
+	font-style: italic;
+}
