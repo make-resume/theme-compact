@@ -1,20 +1,22 @@
 {{#if awards}}
 {{#>section title="Awards"}}
 	{{#each awards}}
-	<div class="mb-5">
-		<div class="columns is-vcentered is-gapless m-0">
-			<h5 class="column mb-3">
-				<span>{{this.title}}</span> ─
-				<span class="is-italic">{{this.awarder}}</span>
+	<div class="item">
+		<div class="item__head">
+			<h4 class="item__title">
+				{{this.title}}
+			</h4>
+			<h5 class="item__subtitle">
+				{{this.awarder}}
 			</h5>
-			<h6 class="column is-narrow mb-3">
+			<h5 class="item__subtle">
 				{{this.date}}
-			</h6>
+			</h5>
 		</div>
 		{{#if this.summary}}
-		<p>
+		<div class="item__content">
 			{{this.summary}}
-		</p>
+		</div>
 		{{/if}}
 	</div>
 	{{/each}}

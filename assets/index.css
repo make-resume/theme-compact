@@ -32,15 +32,15 @@ body {
 	margin-bottom: 8px;
 }
 .item__title {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 700;
 }
 .item__subtitle {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 500;
 }
 .item__subtle {
-	font-size: 16px;
+	font-size: 14px;
 	color: gray;
 	font-style: italic;
 }
