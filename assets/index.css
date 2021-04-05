@@ -26,7 +26,7 @@ body {
 	font-weight: 600;
 }
 .item {
-	margin-bottom: 16px;
+	margin-bottom: 16px !important;
 }
 .item__head {
 	margin-bottom: 8px;
