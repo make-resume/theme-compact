@@ -1,5 +1,6 @@
 body {
 	font-family: "Inter", sans-serif;
+	line-height: 1.4;
 }
 .c-container {
 	width: 80ch;
@@ -23,4 +24,29 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 600;
+}
+.item {
+	margin-bottom: 16px;
+}
+.item__head {
+	margin-bottom: 8px;
+}
+.item__title {
+	font-size: 24px;
+	font-weight: 700;
+}
+.item__subtitle {
+	font-size: 20px;
+	font-weight: 500;
+}
+.item__subtle {
+	font-size: 16px;
+	color: gray;
+	font-style: italic;
+}
+.item__content ul {
+	padding: revert;
+	list-style: revert;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }

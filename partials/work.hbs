@@ -1,31 +1,36 @@
 {{#if work}}
 {{#>section title="Work Experience"}}
 	{{#each work}}
-	<div class="mb-5">
-		<div class="columns is-vcentered is-gapless m-0">
-			<h5 class="column mb-3">
-				<span>{{this.position}}</span> ─ <span class="is-italic">{{this.company}}</span>
+	<div class="item">
+		<div class="item__head">
+			<h4 class="item__title">
+				{{this.position}}
+			</h4>
+			<h5 class="item__subtitle">
+				{{this.company}}
 			</h5>
-			<h6 class="column is-narrow mb-3">
+			<h5 class="item__subtle">
 				{{this.startDate}} ─ {{this.endDate}}
-			</h6>
+			</h5>
 		</div>
-		{{#if this.summary}}
-		<p>
-			{{this.summary}}
-			{{#if this.website}}
-			<br />
-			<a href="{{this.website}}" target="_blank">{{this.website}}</a>
+		<div class="item__content">
+			{{#if this.summary}}
+			<p>
+				{{this.summary}}
+				{{#if this.website}}
+				<br />
+				<a href="{{this.website}}" target="_blank">{{this.website}}</a>
+				{{/if}}
+			</p>
 			{{/if}}
-		</p>
-		{{/if}}
-		{{#if this.highlights}}
-		<ul>
-			{{#each this.highlights}}
-			<li>{{this}}</li>
-			{{/each}}
-		</ul>
-		{{/if}}
+			{{#if this.highlights}}
+			<ul>
+				{{#each this.highlights}}
+				<li>{{this}}</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</div>
 	</div>
 	{{/each}}
 {{/section}}
