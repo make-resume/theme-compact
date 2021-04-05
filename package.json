@@ -1,7 +1,7 @@
 {
 	"name": "make-resume-theme-compact",
 	"version": "1.2.0",
-	"description": "Make Resume built-in and default theme.",
+	"description": "Compact is a built-in theme for Make Resume.",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
