@@ -1,20 +1,20 @@
 {{#if skills}}
 {{#>section title="Skills"}}
-		{{#each skills}}
-		<div class="item">
-			<div class="columns is-gapless is-align-items-center">
-				<div class="column is-2">
-					<h5 class="skill__title">{{this.name}}</h5>
-				</div>
-				<div class="column is-10">
-					{{#if this.keywords}}
-					{{#each this.keywords}}
-					<span class="skill__key">{{this}}</span>
-					{{/each}}
-					{{/if}}
-				</div>
+	{{#each skills}}
+	<div class="item">
+		<div class="columns is-gapless is-align-items-center">
+			<div class="column is-2">
+				<h5 class="skill__title">{{this.name}}</h5>
+			</div>
+			<div class="column is-10">
+				{{#if this.keywords}}
+				{{#each this.keywords}}
+				<span class="skill__key">{{this}}</span>
+				{{/each}}
+				{{/if}}
 			</div>
 		</div>
-		{{/each}}
+	</div>
+	{{/each}}
 {{/section}}
 {{/if}}

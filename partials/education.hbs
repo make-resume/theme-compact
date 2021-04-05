@@ -1,20 +1,17 @@
 {{#if education}}
 {{#>section title="Education"}}
 	{{#each education}}
-	<div class="mb-5">
-		<div class="columns is-vcentered is-gapless m-0">
-			<h5 class="column mb-3">
-				<span>
-				{{this.studyType}}
-				{{#if this.area}}
-				<span class="is-italic">({{this.area}})</span>
-				{{/if}}
-				</span> ─
-				<span class="is-italic">{{this.institution}}</span>
+	<div class="item">
+		<div class="item__head">
+			<h4 class="item__title">
+				{{this.area}}
+			</h4>
+			<h5 class="item__subtitle">
+				{{this.studyType}} — {{this.institution}}
 			</h5>
-			<h6 class="column is-narrow mb-3">
+			<h5 class="item__subtle">
 				{{this.startDate}} ─ {{this.endDate}}
-			</h6>
+			</h5>
 		</div>
 		{{#if this.gpa}}
 		<div>
@@ -22,11 +19,13 @@
 		</div>
 		{{/if}}
 		{{#if this.courses}}
-		<ul>
-			{{#each this.courses}}
-			<li>{{this}}</li>
-			{{/each}}
-		</ul>
+		<div class="item__content">
+			<ul>
+				{{#each this.courses}}
+				<li>{{this}}</li>
+				{{/each}}
+			</ul>
+		</div>
 		{{/if}}
 	</div>
 	{{/each}}
