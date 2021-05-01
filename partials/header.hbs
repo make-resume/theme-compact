@@ -1,110 +1,91 @@
-<header class="c-container py-3">
+<header class="c-container mb-3">
 	<div class="columns is-gapless">
-		<div class="column">
+        {{#if picture}}
+        <figure class="picture image">
+            <img src="{{picture}}" />
+        </figure>
+        {{/if}}
+		<div class="header-info">
 			<h1 class="title has-text-weight-bold">{{name}}</h1>
 			<h3 class="subtitle text-gray is-italic">{{label}}</h3>
-		</div>
-		<div class="column">
-			<div class="columns is-justify-content-space-around">
-				{{#if profiles}}
-				<div class="column is-narrow">
-					{{#each profiles}}
-					{{#eq (lowercase this.network) "twitter"}}
-					<div class="columns is-gapless is-align-items-center m-0">
-						<div class="column is-narrow">
-							<span class="icon"><i class="fab fa-twitter"></i></span>
-						</div>
-						<div class="column ml-2">
-							<a href="{{this.url}}" target="_blank">
-								{{this.username}}
-							</a>
-						</div>
-					</div>
-					{{/eq}}
-					{{#eq (lowercase this.network) "instagram"}}
-					<div class="columns is-gapless is-align-items-center m-0">
-						<div class="column is-narrow">
-							<span class="icon"><i class="fab fa-instagram"></i></span>
-						</div>
-						<div class="column ml-2">
-							<a href="{{this.url}}" target="_blank">
-								{{this.username}}
-							</a>
-						</div>
-					</div>
-					{{/eq}}
-					{{#eq (lowercase this.network) "github"}}
-					<div class="columns is-gapless is-align-items-center m-0">
-						<div class="column is-narrow">
-							<span class="icon"><i class="fab fa-github"></i></span>
-						</div>
-						<div class="column ml-2">
-							<a href="{{this.url}}" target="_blank">
-								{{this.username}}
-							</a>
-						</div>
-					</div>
-					{{/eq}}
-					{{/each}}
-				</div>
-				{{/if}}
-				<div class="column is-narrow">
+			<div class="columns">
+				<div class="column">
 					{{#if website}}
-					<div class="columns is-gapless is-align-items-center m-0">
-						<div class="column is-narrow">
-							<span class="icon"><i class="fas fa-link"></i></span>
-						</div>
-						<div class="column ml-2">
-							<a href="{{website}}" target="_blank">
-								{{website}}
-							</a>
-						</div>
-					</div>
+                    {{#>contact title=website link=website icon="fas fa-link"}}{{/contact}}
 					{{/if}}
 					{{#if email}}
-					<div class="columns is-gapless is-align-items-center m-0">
-						<div class="column is-narrow">
-							<span class="icon"><i class="far fa-envelope"></i></span>
-						</div>
-						<div class="column ml-2">
-							<a href="mailto:{{email}}">
-								{{email}}
-							</a>
-						</div>
-					</div>
+                    {{#>contact title=email link=(prepend email "mailto:") icon="far fa-envelope"}}{{/contact}}
 					{{/if}}
 					{{#if phone}}
-					<div class="columns is-gapless is-align-items-center m-0">
-						<div class="column is-narrow">
-							<span class="icon"><i class="fas fa-phone"></i></span>
-						</div>
-						<div class="column ml-2">
-							<a href="tel:{{phone}}">
-								{{phone}}
-							</a>
-						</div>
-					</div>
+                    {{#>contact title=phone link=(prepend phone "tel:") icon="fas fa-phone"}}{{/contact}}
 					{{/if}}
-					{{#if location}}
+					{{#if location.city}}
 					<div class="columns is-gapless is-align-items-center m-0">
 						<div class="column is-narrow">
 							<span class="icon"><i class="fas fa-map-marker-alt"></i></span>
 						</div>
 						<div class="column ml-2">
-							{{#or location.address location.city}}
 							<p>
-								{{location.address}} {{location.city}}
+							    {{#if location.address}}
+								    {{location.address}}
+							    {{/if}}
+                                {{location.city}}
+                                {{#if location.postalCode}}
+								    {{location.postalCode}}
+							    {{/if}}
+                                {{#if location.region}}
+								    {{location.region}}
+							    {{/if}}
+                                {{#if location.countryCode}}
+								    {{location.countryCode}}
+							    {{/if}}
 							</p>
-							{{/or}}
-							{{#or location.postalCode location.region location.countryCode}}
-							<p>
-								{{location.postalCode}} {{location.region}} {{location.countryCode}}
-							</p>
-							{{/or}}
 						</div>
 					</div>
 					{{/if}}
 				</div>
+                {{#if profiles}}
+				<div class="column">
+				{{#each profiles}}
+				{{#eq (lowercase this.network) "twitter"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-twitter"}}{{/contact}}
+				{{/eq}}
+				{{#eq (lowercase this.network) "instagram"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-instagram"}}{{/contact}}
+				{{/eq}}
+				{{#eq (lowercase this.network) "github"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-github"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "facebook"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-facebook"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "linkedin"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-linkedin"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "skype"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-skype"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "youtube"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-youtube"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "behance"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-behance"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "pinterest"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-pinterest"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "discord"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-discord"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "telegram"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-telegram"}}{{/contact}}
+				{{/eq}}
+                {{#eq (lowercase this.network) "reddit"}}
+                    {{#>contact title=this.username link=this.url icon="fab fa-reddit"}}{{/contact}}
+				{{/eq}}
+				{{/each}}
+				</div>
+				{{/if}}
 			</div>
 		</div>
 	</div>
