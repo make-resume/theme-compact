@@ -1,6 +1,6 @@
-{{#if work}}
-{{#>section title="Work Experience"}}
-	{{#each work}}
+{{#if resume.work}}
+{{#>section title=(sectionTitle resume "work" "Work")}}
+	{{#each resume.work}}
 	<div class="item">
 		<div class="item__head">
 			<h4 class="item__title">

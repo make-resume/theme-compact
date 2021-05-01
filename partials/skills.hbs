@@ -1,6 +1,6 @@
-{{#if skills}}
-{{#>section title="Skills"}}
-	{{#each skills}}
+{{#if resume.skills}}
+{{#>section title=(sectionTitle resume "skills" "Skills")}}
+	{{#each resume.skills}}
 	<div class="item">
 		<div class="columns is-gapless is-align-items-center">
 			<div class="column is-3">

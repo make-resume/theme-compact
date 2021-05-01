@@ -22,17 +22,20 @@
 			{{> summary}}
 			{{/with}}
 
-			{{#with resume}}
-			{{> skills}}
-			{{> work}}
-			{{> volunteer}}
-			{{> education}}
-			{{> awards}}
-			{{> publications}}
-			{{> languages}}
-			{{> interests}}
-			{{> references}}
-			{{/with}}
+			{{!-- dynamically render the section partials. name of partial file and section.key should be the same --}}
+			{{#if resume._meta.sections}}
+				{{{renderSections resume._meta.sections}}}
+			{{else}}
+				{{> work}}
+				{{> volunteer}}
+				{{> education}}
+				{{> awards}}
+				{{> publications}}
+				{{> skills}}
+				{{> interests}}
+				{{> languages}}
+				{{> references}}
+			{{/if}}
 		</div>
 	</body>
 </html>

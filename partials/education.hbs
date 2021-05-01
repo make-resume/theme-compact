@@ -1,6 +1,6 @@
-{{#if education}}
-{{#>section title="Education"}}
-	{{#each education}}
+{{#if resume.education}}
+{{#>section title=(sectionTitle resume "education" "Education")}}
+	{{#each resume.education}}
 	<div class="item">
 		<div class="item__head">
 			<h4 class="item__title">

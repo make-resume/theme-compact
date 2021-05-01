@@ -1,6 +1,6 @@
-{{#if references}}
-{{#>section title="References"}}
-	{{#each references}}
+{{#if resume.references}}
+{{#>section title=(sectionTitle resume "references" "References")}}
+	{{#each resume.references}}
 	<blockquote class="item">
 		{{this.reference}}
 		<br />
