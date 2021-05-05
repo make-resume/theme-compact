@@ -1,0 +1,22 @@
+{
+	"vars": [
+		{
+			"key": "fontFamily",
+			"type": "font-family",
+			"title": "Font Family",
+			"defaultValue": "'Inter', sans-serif"
+		},
+		{
+			"key": "clrHeaderBg",
+			"type": "color",
+			"title": "Header Background",
+			"defaultValue": "#f3f3f3"
+		},
+		{
+			"key": "clrHeaderText",
+			"type": "color",
+			"title": "Header Text",
+			"defaultValue": "#363636"
+		}
+	]
+}

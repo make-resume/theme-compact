@@ -1,5 +1,5 @@
 body {
-	font-family: "Inter", sans-serif;
+	font-family: var(--font-family);
 	line-height: 1.4;
 	padding: 1rem;
 }
@@ -10,7 +10,12 @@ body {
 }
 
 header {
-	background: #f3f3f3;
+	background: var(--clr-header-bg) !important;
+}
+header,
+header .title,
+header .subtitle {
+	color: var(--clr-header-text) !important;
 }
 
 .picture {
@@ -74,10 +79,6 @@ blockquote {
 	background: #f3f3f3;
 	padding: 8px 16px;
 	font-style: italic;
-}
-
-.text-gray {
-	color: gray;
 }
 
 @media print {
